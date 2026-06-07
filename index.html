@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Open Microlock is an open-source community building DARMI, a digital access management interface for ESP32 devices, mobile apps, and operational dashboards."
+    />
+    <title>Open Microlock | DARMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Open Microlock home">
+        <img src="../poc-mobileapp/assets/logo_trim.png" alt="" />
+        <span>Open Microlock</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contribute">Contribute</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">DARMI / Digital Access Management Interface</p>
+          <h1>Open Microlock</h1>
+          <p class="hero-text">
+            Open Microlock is a technology community building the DARMI
+            ecosystem: ESP32 firmware, mobile control, dashboards, and
+            operational workflows for smarter local infrastructure.
+          </p>
+          <div class="hero-points" aria-label="Open Microlock focus areas">
+            <span>ESP32 devices</span>
+            <span>Mobile control</span>
+            <span>Open-source docs</span>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#project">Explore Project</a>
+            <a class="button secondary" href="#contribute">Contribute</a>
+          </div>
+        </div>
+
+        <div class="product-preview" aria-label="DARMI product preview">
+          <div class="mobile-preview" data-lock-preview>
+            <div class="mobile-topbar">
+              <div>
+                <span>Microlock</span>
+                <small>Front Door</small>
+              </div>
+              <span class="connection-pill">Active</span>
+            </div>
+            <div class="lock-card" data-lock-card>
+              <div class="lock-ring" aria-hidden="true">
+                <span class="pulse-ring"></span>
+                <svg class="lock-icon lock-icon-locked" data-icon-locked viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M20 28v-7c0-7 5-12 12-12s12 5 12 12v7" />
+                  <rect x="16" y="28" width="32" height="26" rx="7" />
+                  <path d="M32 38v7" />
+                </svg>
+                <svg class="lock-icon lock-icon-unlocked" data-icon-unlocked viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M21 28v-7c0-7 5-12 12-12 5 0 9 3 11 7" />
+                  <rect x="16" y="28" width="32" height="26" rx="7" />
+                  <path d="M32 38v7" />
+                </svg>
+              </div>
+              <strong data-lock-state>LOCKED</strong>
+              <span>Main entrance</span>
+              <small data-lock-updated>Updated just now</small>
+              <div class="auto-lock" data-auto-lock hidden>
+                <span>
+                  <span class="timer-dot" aria-hidden="true"></span>
+                  Auto-lock in <strong data-countdown>5s</strong>
+                </span>
+                <span class="auto-lock-track">
+                  <span data-countdown-bar></span>
+                </span>
+              </div>
+            </div>
+            <div class="slide-preview" data-slide-track role="button" tabindex="0" aria-label="Slide to unlock">
+              <span class="slide-fill" data-slide-fill></span>
+              <span class="slide-thumb" data-slide-thumb>→</span>
+              <span data-slide-text>Slide to unlock</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="updates section" aria-labelledby="updates-title">
+        <div class="section-heading">
+          <p class="eyebrow">Latest Updates</p>
+          <h2 id="updates-title">Community updates and project notes.</h2>
+        </div>
+        <div class="update-grid">
+          <article class="update-card">
+            <p class="tag">Community Milestone</p>
+            <h3>2nd place at West Jakarta Pemuda Pelopor</h3>
+            <p>
+              A community milestone from Open Microlock's participation in a
+              youth leadership program. The public post should include the
+              final date, photos, or certificate.
+            </p>
+          </article>
+          <article class="update-card">
+            <p class="tag">Open-source Progress</p>
+            <h3>DARMI is being prepared for public release</h3>
+            <p>
+              Documentation, licensing, README files, roadmap, and contribution
+              structure are being prepared so the ecosystem can be studied and
+              extended in public.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Building digital access from hardware to interface.</h2>
+        </div>
+        <div class="split">
+          <div>
+            <p>
+              Open Microlock started from the need to make digital access
+              systems that do not stop at demos. The community connects
+              firmware, mobile apps, dashboards, documentation, and contribution
+              processes so the work can be learned and improved openly.
+            </p>
+          </div>
+          <div class="principles">
+            <div>
+              <strong>Open by design</strong>
+              <span>Repositories, documentation, and roadmaps are prepared for public access.</span>
+            </div>
+            <div>
+              <strong>Real prototypes</strong>
+              <span>Focused on devices, applications, and workflows that can be tested.</span>
+            </div>
+            <div>
+              <strong>Community first</strong>
+              <span>Contributions can come through firmware, mobile, backend, UI/UX, and docs.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="system section" aria-labelledby="darmi-title">
+        <div class="section-heading">
+          <p class="eyebrow">DARMI</p>
+          <h2 id="darmi-title">One interface for a digital access ecosystem.</h2>
+        </div>
+        <div class="flow" aria-label="DARMI ecosystem flow">
+          <div>
+            <span>01</span>
+            <strong>ESP32 Devices</strong>
+            <small>Smart lock, smart lamp, simulator.</small>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Local API</strong>
+            <small>HTTP JSON endpoints for prototyping.</small>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Mobile & Dashboard</strong>
+            <small>Device control and operational monitoring.</small>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Users & Operations</strong>
+            <small>Users, communities, makers, and local programs.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="project">
+        <div class="section-heading">
+          <p class="eyebrow">Project</p>
+          <h2>A project ecosystem being prepared for public release.</h2>
+        </div>
+        <div class="project-list">
+          <article class="project-card">
+            <div>
+              <p class="tag">Firmware</p>
+              <h3>MicroLock Firmware</h3>
+              <p>ESP32 firmware for smart lock control with a local API and token authentication.</p>
+            </div>
+            <dl>
+              <div><dt>Stack</dt><dd>ESP32, PlatformIO, Arduino</dd></div>
+              <div><dt>Status</dt><dd>Active prototype</dd></div>
+            </dl>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="tag">Mobile</p>
+              <h3>Darmi Mobile</h3>
+              <p>Flutter app for smart lock control, smart lamp control, setup flows, and provisioning.</p>
+            </div>
+            <dl>
+              <div><dt>Stack</dt><dd>Flutter, Dart, Material 3</dd></div>
+              <div><dt>Status</dt><dd>Active prototype</dd></div>
+            </dl>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="tag">Operations</p>
+              <h3>DARMI Sales Order</h3>
+              <p>An MVP for Telegram order intake and monitoring through a web dashboard.</p>
+            </div>
+            <dl>
+              <div><dt>Stack</dt><dd>FastAPI, PostgreSQL, Next.js</dd></div>
+              <div><dt>Status</dt><dd>MVP</dd></div>
+            </dl>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="tag">Device</p>
+              <h3>MicroLamp / Smart Lamp</h3>
+              <p>An ESP32-based extension of the device control use case for smart lamps.</p>
+            </div>
+            <dl>
+              <div><dt>Stack</dt><dd>ESP32, HTTP API</dd></div>
+              <div><dt>Status</dt><dd>Active prototype</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="contribute section" id="contribute">
+        <div class="section-heading">
+          <p class="eyebrow">Contribute</p>
+          <h2>Contribution paths are defined early.</h2>
+        </div>
+        <div class="contribute-grid">
+          <div>
+            <strong>Documentation</strong>
+            <span>README files, architecture docs, setup guides, and tutorials.</span>
+          </div>
+          <div>
+            <strong>Engineering</strong>
+            <span>Firmware, mobile app, dashboard, simulators, and testing.</span>
+          </div>
+          <div>
+            <strong>Governance</strong>
+            <span>License, contributing guide, code of conduct, issue labels.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Open for collaboration.</h2>
+          <p>
+            We are open to collaboration with communities, schools, makers,
+            small businesses, and local programs that want to explore
+            open-source digital access systems.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/OpenMicrolock">GitHub Organization</a>
+          <a class="button secondary" href="mailto:hello@openmicrolock.org">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Open Microlock / DARMI</span>
+      <span>Open-source digital access ecosystem.</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
