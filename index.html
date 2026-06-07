@@ -53,45 +53,84 @@
         </div>
 
         <div class="product-preview" aria-label="DARMI product preview">
-          <div class="mobile-preview" data-lock-preview>
-            <div class="mobile-topbar">
-              <div>
-                <span>Microlock</span>
-                <small>Front Door</small>
+          <div class="phone-shell" data-lock-preview>
+            <div class="phone-bezel">
+              <div class="phone-statusbar" aria-hidden="true">
+                <span>22:14</span>
+                <span>●●●  84%</span>
               </div>
-              <span class="connection-pill">Active</span>
-            </div>
-            <div class="lock-card" data-lock-card>
-              <div class="lock-ring" aria-hidden="true">
-                <span class="pulse-ring"></span>
-                <svg class="lock-icon lock-icon-locked" data-icon-locked viewBox="0 0 64 64" aria-hidden="true">
-                  <path d="M20 28v-7c0-7 5-12 12-12s12 5 12 12v7" />
-                  <rect x="16" y="28" width="32" height="26" rx="7" />
-                  <path d="M32 38v7" />
-                </svg>
-                <svg class="lock-icon lock-icon-unlocked" data-icon-unlocked viewBox="0 0 64 64" aria-hidden="true">
-                  <path d="M21 28v-7c0-7 5-12 12-12 5 0 9 3 11 7" />
-                  <rect x="16" y="28" width="32" height="26" rx="7" />
-                  <path d="M32 38v7" />
-                </svg>
+              <div class="app-bar">
+                <div class="app-title">
+                  <img src="../poc-mobileapp/assets/logo_trim.png" alt="" />
+                  <span>Microlock</span>
+                </div>
+                <span class="app-menu">⋮</span>
               </div>
-              <strong data-lock-state>LOCKED</strong>
-              <span>Main entrance</span>
-              <small data-lock-updated>Updated just now</small>
-              <div class="auto-lock" data-auto-lock hidden>
+              <div class="phone-content">
+                <div class="device-switcher">
+                  <div>
+                    <small>Active device</small>
+                    <span>Front Door</span>
+                  </div>
+                  <span class="connection-pill">Active</span>
+                </div>
+                <div class="lock-card" data-lock-card>
+                  <div class="lock-ring" aria-hidden="true">
+                    <span class="pulse-ring"></span>
+                    <svg class="lock-icon lock-icon-locked" data-icon-locked viewBox="0 0 64 64" aria-hidden="true">
+                      <path d="M20 28v-7c0-7 5-12 12-12s12 5 12 12v7" />
+                      <rect x="16" y="28" width="32" height="26" rx="7" />
+                      <path d="M32 38v7" />
+                    </svg>
+                    <svg class="lock-icon lock-icon-unlocked" data-icon-unlocked viewBox="0 0 64 64" aria-hidden="true">
+                      <path d="M21 28v-7c0-7 5-12 12-12 5 0 9 3 11 7" />
+                      <rect x="16" y="28" width="32" height="26" rx="7" />
+                      <path d="M32 38v7" />
+                    </svg>
+                  </div>
+                  <strong data-lock-state>LOCKED</strong>
+                  <span>Main entrance</span>
+                  <small data-lock-updated>Updated just now</small>
+                  <div class="auto-lock" data-auto-lock hidden>
+                    <span>
+                      <span class="timer-dot" aria-hidden="true"></span>
+                      Auto-lock in <strong data-countdown>5s</strong>
+                    </span>
+                    <span class="auto-lock-track">
+                      <span data-countdown-bar></span>
+                    </span>
+                  </div>
+                </div>
+                <div class="slide-preview" data-slide-track role="button" tabindex="0" aria-label="Slide to unlock">
+                  <span class="slide-fill" data-slide-fill></span>
+                  <span class="slide-thumb" data-slide-thumb>→</span>
+                  <span data-slide-text>Swipe right to unlock</span>
+                </div>
+                <button class="refresh-preview" type="button">Refresh Status</button>
+              </div>
+              <div class="phone-nav" aria-hidden="true">
+                <span class="is-active">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z" />
+                  </svg>
+                  Home
+                </span>
                 <span>
-                  <span class="timer-dot" aria-hidden="true"></span>
-                  Auto-lock in <strong data-countdown>5s</strong>
+                  <svg viewBox="0 0 24 24">
+                    <rect x="5" y="4" width="10" height="16" rx="2" />
+                    <path d="M18 8h1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1" />
+                    <path d="M8.5 17h3" />
+                  </svg>
+                  Devices
                 </span>
-                <span class="auto-lock-track">
-                  <span data-countdown-bar></span>
+                <span>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+                    <path d="M19 12a7.5 7.5 0 0 0-.1-1.2l2-1.5-2-3.4-2.4 1a7.8 7.8 0 0 0-2-1.1L14.2 3h-4.4l-.4 2.8a7.8 7.8 0 0 0-2 1.1l-2.4-1-2 3.4 2 1.5A7.5 7.5 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.4-1a7.8 7.8 0 0 0 2 1.1l.4 2.8h4.4l.4-2.8a7.8 7.8 0 0 0 2-1.1l2.4 1 2-3.4-2-1.5c.1-.4.1-.8.1-1.2z" />
+                  </svg>
+                  Settings
                 </span>
               </div>
-            </div>
-            <div class="slide-preview" data-slide-track role="button" tabindex="0" aria-label="Slide to unlock">
-              <span class="slide-fill" data-slide-fill></span>
-              <span class="slide-thumb" data-slide-thumb>→</span>
-              <span data-slide-text>Slide to unlock</span>
             </div>
           </div>
         </div>

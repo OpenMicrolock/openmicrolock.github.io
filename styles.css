@@ -229,7 +229,7 @@ h2 {
   justify-content: center;
 }
 
-.mobile-preview,
+.phone-shell,
 .update-card,
 .project-card,
 .principles div,
@@ -240,46 +240,98 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.mobile-preview {
+.phone-shell {
   --state-color: #2e7d4f;
   --state-soft: rgba(46, 125, 79, 0.12);
   --state-border: rgba(46, 125, 79, 0.42);
-  width: min(100%, 360px);
-  padding: 18px;
-  border-color: #2d4a36;
-  border-radius: 28px;
-  background: #0d1b12;
+  width: min(100%, 350px);
+  padding: 10px;
+  border: 1px solid #17251b;
+  border-radius: 38px;
+  background: #07110b;
   color: #e8f0eb;
-  box-shadow: 0 22px 60px rgba(13, 27, 18, 0.18);
+  box-shadow: 0 26px 70px rgba(13, 27, 18, 0.22);
 }
 
-.mobile-preview.is-unlocked {
+.phone-shell.is-unlocked {
   --state-color: #ef5350;
   --state-soft: rgba(239, 83, 80, 0.12);
   --state-border: rgba(239, 83, 80, 0.38);
 }
 
-.mobile-topbar {
+.phone-bezel {
+  overflow: hidden;
+  border: 1px solid #26392c;
+  border-radius: 30px;
+  background: #0d1b12;
+}
+
+.phone-statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px 6px;
+  color: #a3b8ab;
+  font-size: 11px;
+}
+
+.app-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 18px;
+  padding: 12px 18px 14px;
+  background: #0d1b12;
 }
 
-.mobile-topbar span,
-.mobile-topbar small,
+.app-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+}
+
+.app-title img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+}
+
+.app-menu {
+  color: #a3b8ab;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.phone-content {
+  padding: 14px 18px 18px;
+}
+
+.device-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 1px solid #1f3628;
+  border-radius: 12px;
+  background: #142a1b;
+}
+
+.device-switcher span,
+.device-switcher small,
 .lock-card strong,
 .lock-card span,
 .lock-card small {
   display: block;
 }
 
-.mobile-topbar span {
-  font-weight: 600;
+.device-switcher span {
+  margin-top: 3px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.mobile-topbar small,
+.device-switcher small,
 .lock-card span,
 .lock-card small {
   color: #a3b8ab;
@@ -297,9 +349,9 @@ h2 {
 .lock-card {
   display: grid;
   justify-items: center;
-  padding: 28px 18px;
+  padding: 24px 16px;
   border: 1px solid var(--state-border);
-  border-radius: 18px;
+  border-radius: 24px;
   background: linear-gradient(145deg, var(--state-soft), rgba(26, 51, 36, 0.82));
   transition: border-color 180ms ease, background 180ms ease;
 }
@@ -308,9 +360,9 @@ h2 {
   position: relative;
   display: grid;
   place-items: center;
-  width: 132px;
-  height: 132px;
-  margin-bottom: 22px;
+  width: 124px;
+  height: 124px;
+  margin-bottom: 20px;
   border: 2px solid color-mix(in srgb, var(--state-color) 35%, transparent);
   border-radius: 999px;
   background: var(--state-soft);
@@ -325,7 +377,7 @@ h2 {
   opacity: 0;
 }
 
-.mobile-preview.is-unlocked .pulse-ring {
+.phone-shell.is-unlocked .pulse-ring {
   animation: pulse-ring 1.7s ease-out infinite;
 }
 
@@ -348,12 +400,12 @@ h2 {
   transform: scale(1);
 }
 
-.mobile-preview.is-unlocked .lock-icon-locked {
+.phone-shell.is-unlocked .lock-icon-locked {
   opacity: 0;
   transform: scale(0.86) rotate(-8deg);
 }
 
-.mobile-preview.is-unlocked .lock-icon-unlocked {
+.phone-shell.is-unlocked .lock-icon-unlocked {
   opacity: 1;
   transform: scale(1) rotate(0deg);
 }
@@ -361,7 +413,7 @@ h2 {
 .lock-card strong {
   color: var(--state-color);
   font-size: 28px;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0;
   transition: color 180ms ease;
 }
@@ -489,6 +541,62 @@ h2 {
 .slide-preview > span:last-child {
   position: relative;
   z-index: 1;
+}
+
+.refresh-preview {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 14px;
+  border: 1px solid #2d4a36;
+  border-radius: 8px;
+  background: transparent;
+  color: #e8f0eb;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.phone-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 8px 12px 10px;
+  border-top: 1px solid #1f3628;
+  background: #142a1b;
+}
+
+.phone-nav span {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  border-radius: 12px;
+  color: #6b7f72;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.phone-nav svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.phone-nav .is-active {
+  color: #2e7d4f;
+}
+
+.phone-nav .is-active svg {
+  padding: 3px 12px;
+  width: 46px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(46, 125, 79, 0.25);
 }
 
 @keyframes pulse-ring {
@@ -716,6 +824,14 @@ h2 {
 
   h2 {
     font-size: 30px;
+  }
+
+  .phone-shell {
+    width: min(100%, 330px);
+  }
+
+  .phone-content {
+    padding: 12px 14px 16px;
   }
 
   .footer {
