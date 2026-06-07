@@ -65,7 +65,7 @@ body.header-hidden .site-header {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 650;
+  /* font-weight: 650; */
   letter-spacing: 0;
 }
 
@@ -385,14 +385,21 @@ h2 {
   position: absolute;
   width: 76px;
   height: 76px;
-  fill: none;
-  stroke: var(--state-color);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 5;
   opacity: 0;
   transform: scale(0.86);
-  transition: opacity 180ms ease, transform 180ms ease, stroke 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.lock-body-fill,
+.lock-shackle {
+  fill: var(--state-color);
+}
+
+.lock-key {
+  fill: none;
+  stroke: #0d1b12;
+  stroke-linecap: round;
+  stroke-width: 5;
 }
 
 .lock-icon-locked {
